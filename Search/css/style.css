@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #ecf0f1;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+/* 头部 */
+
+.search-header {
+    position: absolute;
+    top: 0;
+}
+
+/* 头部END */
+
+/* 底部END */
+
+.search-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background: #dedede;
+    border: 1px solid #dfe1e5;
+}
+
+/* 底部END */
+
+/* 挂件部分 */
+
+.search-pendant {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.search-pendant-point {
+    margin: 20px;
+    width: 20px;
+    height: 20px;
+    /* background: #C3C; */
+    border-radius: 50%;
+    transition: 0.5s;
+    animation: discolor 10s infinite;
+    box-shadow: 0 1px 10px 0 rgba(32, 33, 36, 0.5);
+    /* 去除checkbox样式 */
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    display: inline-block;
+}
+
+.search-pendant-toppoint {
+    width: 0px;
+    display: inline-block;
+}
+
+.search-pendant-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 100%;
+    background: #ffffff;
+    transition: 0.5s;
+}
+
+.search-pendant-info {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 50px;
+    display: none;
+}
+
+.search-pendant-info a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.search-pendant-info>* {
+    margin: 0 0 20px;
+    padding: 0 5px;
+    color: #ffffff;
+    background: #C3C;
+    border-radius: 5px;
+    display: block;
+    float: right;
+    box-shadow: 0 1px 10px 0 rgba(32, 33, 36, 0.5);
+    /* 强制禁止换行 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.search-pendant-point:checked~.search-pendant-toppoint {
+    width: 25px;
+}
+
+.search-pendant-point:checked~.search-pendant-content {
+    width: 50px;
+    box-shadow: 0 1px 10px 0 rgba(32, 33, 36, 0.5);
+}
+
+.search-pendant-point:checked~.search-pendant-info {
+    display: block;
+}
+
+@keyframes discolor {
+    0% {
+        background: #cc33cc;
+    }
+    10% {
+        background: #ab44ff;
+    }
+    20% {
+        background: #44ffe6;
+    }
+    30% {
+        background: #f3ff44;
+    }
+    40% {
+        background: #ff7044;
+    }
+    50% {
+        background: #cc33cc;
+    }
+    60% {
+        background: #ff7044;
+    }
+    70% {
+        background: #f3ff44;
+    }
+    80% {
+        background: #44ffe6;
+    }
+    90% {
+        background: #ab44ff;
+    }
+    100% {
+        background: #cc33cc;
+    }
+}
+
+/* 挂件部分END */
+
+/* 搜索部分 */
+
+.search-content {
+    margin-top: 100px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.search-img {
+    height: 100px;
+}
+
+.search-box {
+    margin: auto;
+    padding: 5px;
+    width: 800px;
+    height: 33px;
+    background: #ffffff;
+    border: 1px solid #dfe1e5;
+    border-radius: 40px;
+}
+
+.search-box:hover {
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+    border-color: rgba(223, 225, 229, 0);
+}
+
+.search-int {
+    padding: 0 10px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.search-input {
+    width: 100%;
+    height: 100%;
+    color: #000000;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    transition: 0.5s;
+}
+
+.search-btn {
+    float: right;
+    width: 33px;
+    height: 33px;
+    color: #e74c3c;
+    background: #2c3e50;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.search-box:hover .search-btn {
+    background: #ffffff;
+}
+
+.search-ico {
+    margin: 9px;
+    width: 16px;
+    height: 16px;
+}
+
+/* 搜索部分END */
+
+/* 书签部分 */
+
+.search-bookmark {
+    margin: 100px auto 0;
+    width: 80%;
+    text-align: center;
+}
+
+.search-bookmark>a {
+    margin: 5px;
+    padding: 5px;
+    width: 100px;
+    display: block;
+    float: left;
+    overflow: hidden;
+}
+
+.search-bookmark>a:hover {
+    border-radius: 5px;
+    background: rgba(245, 88, 123, 0.2);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.search-bookmark>a:active {
+    border-radius: 5px;
+    background: rgba(228, 23, 73, 0.2);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.search-bookmark>a>p {
+    /* 强制禁止换行 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.search-bookmark>a>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+/* 书签部分END */
+
+/* 搜索结果页面 */
+
+/* 搜索输入框部分 */
+
+.search-page {
+    background: #ffffff;
+}
+
+.search-page .search-bookmark {
+    display: none;
+}
+
+.search-page .search-content {
+    margin-top: 0;
+    padding: 10px;
+    text-align: unset;
+    background: #ecf0f1;
+    box-shadow: 0 1px 10px 0 rgba(32, 33, 36, 0.5);
+}
+
+.search-page .search-img {
+    display: none;
+}
+
+.search-page .search-box {
+    margin: 0;
+    border-radius: 0;
+    display: inline-block;
+}
+
+.search-page .search-btn {
+    background: none;
+}
+
+/* 搜索输入框部分END */
+
+/* 搜索结果部分 */
+
+.search-data {
+    display: none;
+}
+
+.search-page .search-data {
+    margin-top: 20px;
+    width: 100%;
+    display: block;
+}
+
+.search-page .search-data-left {
+    float: left;
+    width: 60%;
+}
+
+.search-page .search-data-left .search-data-btn {
+    margin: 10px 40px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: #ecf0f1;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+}
+
+.search-page .search-data-left .search-data-btn:active {
+    border-color: #ffffff;
+}
+
+.search-page .search-data-left .search-data-content {
+    margin: 10px 10px 25px;
+    padding: 5px;
+    color: #000000;
+}
+
+.search-page .search-data-left .search-data-content:hover {
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.search-page .search-data-left .search-data-content * {
+    overflow: hidden;
+}
+
+.search-page .search-data-left .search-data-content h1, h2, h3, h4, h5, h6 {
+    display: inline-block;
+    font-weight: 100;
+}
+
+.search-page .search-data-left .search-data-content>div {
+    /* 支持换行 */
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
+    /* 超出显示省略号 */
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.search-page .search-data-left .search-data-content>div img {
+    margin-top: 5px;
+    margin-right: 5px;
+    height: 16px;
+}
+
+.search-page .search-data-left .search-data-content>div span {
+    margin-top: 5px;
+    margin-right: 5px;
+    height: 18px;
+    display: inline-block;
+}
+
+.search-page .search-data-left .search-data-content>div em {
+    font-style: normal;
+    color: #ff0000;
+}
+
+.search-page .search-data-right {
+    float: right;
+    width: 40%;
+}
+
+/* 搜索结果部分END */
+
+/* 搜索结果页面END */

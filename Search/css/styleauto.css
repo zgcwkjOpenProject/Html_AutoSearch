@@ -1,0 +1,44 @@
+@media only screen and (max-width: 768px) {
+    .search-content {
+        margin-top: 0;
+    }
+    .search-pendant-point {
+        display: none;
+    }
+    .search-box {
+        width: 425px;
+    }
+    .search-bookmark {
+        margin: 40px auto 0;
+        width: 90%;
+    }
+    .search-bookmark>a {
+        width: 70px;
+        display: inline-block;
+        float: unset;
+    }
+    .search-page .search-data-left {
+        width: 100%;
+    }
+    .search-page .search-data-content {
+        margin-bottom: 10px;
+    }
+    .search-page .search-data-content:hover {
+        box-shadow: none;
+    }
+    .search-page .search-data-right {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .search-box {
+        width: 320px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .search-box {
+        width: 240px;
+    }
+}

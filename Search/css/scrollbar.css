@@ -1,0 +1,21 @@
+/*滚动条美化*/
+::-webkit-scrollbar-track-piece { /*滚动条背景*/
+        background-color: rgba(234,234,234,0.8);
+    }
+
+    ::-webkit-scrollbar { /*滚动条前景*/
+        width: 5px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb { /*滚动条*/
+        background-color: #999;
+        border-radius: 0px;
+        /*border: 1px solid #FFF;*/
+    }
+
+        ::-webkit-scrollbar-thumb:hover { /*滚动条悬浮*/
+            background-color: #9F9F9F;
+            border-radius: 0px;
+        }
+/*滚动条美化-END*/
